@@ -1,7 +1,9 @@
-package com.example.joon1.project_gt;
+package com.example.joon1.project_gt.controller;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.joon1.project_gt.R;
 
 public class Login extends AppCompatActivity {
 
