@@ -81,6 +81,8 @@ public class Registration extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
 
+                                System.out.println("======================================================================================================================");
+
                                 if (task.isSuccessful()) {
                                     User user = new User(username.getText().toString(), name.getText().toString(), password.getText().toString(), email.getText().toString(), phoneNumber.getText().toString(), gender.getSelectedItem().toString());
                                     String id = databaseReference.push().getKey();
