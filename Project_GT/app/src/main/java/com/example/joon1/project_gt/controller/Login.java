@@ -23,6 +23,7 @@ public class Login extends AppCompatActivity {
     private EditText email;
     private EditText password;
     private Button loginButton;
+    private Button registerButton;
 
     private FirebaseAuth firebaseAuth;
     private DatabaseReference databaseReference;
@@ -39,11 +40,18 @@ public class Login extends AppCompatActivity {
         email = (EditText) findViewById(R.id.email_edit);
         password = (EditText) findViewById(R.id.password_edit);
         loginButton = (Button) findViewById((R.id.loginButton));
+        registerButton = (Button) findViewById((R.id.registrationButton));
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 attemptLogin();
+            }
+        });
+        registerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new Intent(Login.this, Registration.class);
             }
         });
     }
